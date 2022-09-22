@@ -1,0 +1,15 @@
+version: "3.9"
+
+volumes:
+  academy_content:
+
+services:
+  academy-content:
+    image: academy-content
+    container_name: academy_content
+    volumes:
+        - academy_content:/academy_content
+    ports:
+      - "8787:8787"
+    environment:
+      PASSWORD: password
